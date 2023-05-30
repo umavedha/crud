@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { EmployeelistComponent } from './employeelist/employeelist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmpserviceService } from './empservice.service';
+import { CompanyComponent } from './company/company.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeelistComponent
+    EmployeelistComponent,
+    CompanyComponent,
+    EmployeeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

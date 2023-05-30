@@ -10,23 +10,12 @@ table {
     padding: 8px;
   }
   
-  th {
-    background-color: #333;
-    color: white;
+
+  tr:hover{
+    cursor: pointer;
   }
-  
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
+  tr:first-child {
+    cursor: default;
   }
-  
-  tr:nth-child(odd) {
-    background-color: #ddd;
-  }
-  
-  td:nth-child(even) {
-    background-color: #a6dcef;
-  }
-  
-  td:nth-child(odd) {
-    background-color: #d8a6ef;
-  }
+  tr:not(:first-child):hover {
+    background: bisque;}

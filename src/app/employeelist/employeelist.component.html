@@ -4,15 +4,15 @@
     <tr>
       <th>Employee Name</th>
       <th>Email</th>
-      <th>Gender</th>
-      <th>Blood Group</th>
+      <!-- <th>Gender</th>
+      <th>Blood Group</th> -->
       <th>Reporting Person</th>
     </tr>
-    <tr *ngFor="let e of employeeData">
+    <tr *ngFor="let e of employeeList" (click)="goToDetail(e.id)">
       <td>{{e.empName}}</td>
       <td>{{e.email}}</td>
-      <td>{{e.gender}}</td>
-      <td>{{e.bloodGroup}}</td>
+      <!-- <td>{{e.gender}}</td>
+      <td>{{e.bloodGroup}}</td> -->
       <td>{{e.reportingPerson}}</td>
     </tr>
 </table>

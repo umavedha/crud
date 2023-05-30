@@ -1,0 +1,33 @@
+<p>Employee Details</p>
+<button type="button" (click)="goBack()">Back</button>
+<p></p>
+<div *ngFor="let e of empData">
+<div>
+    <span>Name:</span>
+<span>{{e.empName}}</span>
+</div>
+<div>
+    <span>Email:</span>
+<span>
+    {{e.email}}
+</span>
+</div>
+<div>
+    <span>Gender:</span>
+<span>
+    {{e.gender}}
+</span>
+</div>
+<div>
+    <span>Blood group:</span>
+<span>
+    {{e.bloodGroup}}
+</span>
+</div>
+<div>
+    <span>Reporting Person:</span>
+<span>
+    {{e.reportingPerson}}
+</span>
+</div>
+</div>

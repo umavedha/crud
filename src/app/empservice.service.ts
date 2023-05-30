@@ -10,4 +10,9 @@ export class EmpserviceService {
   getAllEmployees(){
     return this.http.get(this.appUrl+`/getAllEmployee`)
   }
+  getEmployeeById(id:number){
+    return this.http.get(this.appUrl+`/getEmployeeById/${id}`)
+  }
+  
+
 }

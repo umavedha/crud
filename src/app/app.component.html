@@ -1,1 +1,17 @@
-<app-employeelist [employeeData]="employeeList"></app-employeelist>
+<!-- <app-employeelist [employeeData]="employeeList"></app-employeelist> -->
+<div class="homeNav">
+ <a routerLink="">Dashboard</a>
+<a routerLink="employee">Employee List</a>
+<a routerLink="company">Company</a>
+</div>
+
+
+
+<router-outlet></router-outlet>
+<!-- routing -->
+<!-- 1.enable routing -->
+<!-- 2.import appRouting module -->
+<!-- 3.creates app.routing.modules.ts -->
+<!-- 4.adds base href to index.html(root) -->
+<!-- 5.in app.routing.module.ts added the routes using path and component -->
+<!-- 6.add router-outlet tag in app.component.html -->
