@@ -13,6 +13,23 @@ export class EmpserviceService {
   getEmployeeById(id:number){
     return this.http.get(this.appUrl+`/getEmployeeById/${id}`)
   }
+  addEmployeeData(data:any){
+    return this.http.post(this.appUrl+`/addEmployee`,data)
+  }
+  updateEmployeeById(id:number,data:any){
+    return this.http.put(this.appUrl+`/updateEmployee/${id}`,data)
+  }
+  deleteEmployeeById(id:number){
+    return this.http.put(this.appUrl+`/deleteEmployee`,{id:id})
+  }
+  getAllGender(){
+    return this.http.get(this.appUrl+`/getAllGender`)
+
+  }
+  getAllBloodGroup(){
+    return this.http.get(this.appUrl+`/getAllBloodGroup`)
+
+  }
   
 
 }

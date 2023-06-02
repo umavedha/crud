@@ -26,5 +26,10 @@ export class EmployeeComponent implements OnInit {
   goBack(){
     this.router.navigate(['/employee'])
   }
+  // getById(id:number){
+  //   this.service.getEmployeeById(id).subscribe((data)=>{
+  //     this.empData=data
+      
+  //   })}
 
 }

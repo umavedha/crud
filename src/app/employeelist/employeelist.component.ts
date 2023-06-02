@@ -10,7 +10,8 @@ import { ActivatedRoute ,Router} from '@angular/router';
 })
 export class EmployeelistComponent implements OnInit {
   // @Input() public employeeData:any;
-  employeeList:any
+  employeeList:any;
+  empData:any;
   constructor(public service:EmpserviceService,public router:Router){}
   ngOnInit(): void {
     this.getAllEmployees()
@@ -20,9 +21,22 @@ export class EmployeelistComponent implements OnInit {
       return this.employeeList=data
     })
   }
-  goToDetail(id:number){
-    this.router.navigate(['/employee',id])
+  getById(id:number){
+    this.router.navigate(['/editEmployee',id])
 
   }
+  addEmployee(){
+    this.router.navigate(['/addEmployee'])
+  }
+  deleteData(id:number){
+    this.service.deleteEmployeeById(id).subscribe((data)=>{
+      console.log(data);
+      this.getAllEmployees()
+      
+    })
+  }
+ 
+
+
 
 }

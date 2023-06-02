@@ -19,3 +19,15 @@ table {
   }
   tr:not(:first-child):hover {
     background: bisque;}
+
+.list{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  .btn-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    width: 65%;
+  }
+}

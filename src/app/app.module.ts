@@ -9,6 +9,8 @@ import { EmpserviceService } from './empservice.service';
 import { CompanyComponent } from './company/company.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EmployeeformComponent } from './employeeform/employeeform.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     EmployeelistComponent,
     CompanyComponent,
     EmployeeComponent,
-    DashboardComponent
+    DashboardComponent,
+    EmployeeformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [EmpserviceService],

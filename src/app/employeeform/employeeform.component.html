@@ -1,0 +1,81 @@
+<h2>Add Employee</h2>
+<form #employeeForm="ngForm">
+  <div>
+    <!-- {{employeeForm.value|json}} -->
+   </div>
+  <div class="form-group">
+    <div class="formItem">
+      <label for="empName">Name</label>
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="empName"
+          name="empName"
+        />
+      </div>
+    </div>
+    <div class="formItem">
+      <label for="email">Email</label>
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="email"
+          name="email"
+        />
+      </div>
+    </div>
+    <div class="formItem">
+      <label for="reportingPerson">Reporting Person</label>
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="reportingPerson"
+          name="reportingPerson"
+        />
+      </div>
+    </div>
+    <div class="formItem">
+      <label for="gender">Gender</label>
+      <div>
+        <select
+          class="form-select"
+          aria-label="select gender"
+          [(ngModel)]="genderId"
+          name="gender"
+          value="select"
+        >
+          <option *ngFor="let g of genderData" [value]="g.id">{{g.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="formItem">
+      <label for="bloodGroup">Blood Group</label>
+      <div>
+        <select
+          class="form-select"
+          aria-label="select blood group"
+          [(ngModel)]="+bloodGroupId"
+          name="bloodGroup"
+          value="select"
+          
+        >
+          <option *ngFor="let b of bloodData" [value]="b.id">{{b.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <button *ngIf="!update" (click)="addEmployee(employeeForm.value)" type="button">
+        Add Employee
+      </button>
+      <button *ngIf="update" (click)="updateData(empId,employeeForm.value)" type="button">
+        Update
+      </button>
+
+    </div>
+  </div>
+
+  <div></div>
+</form>
